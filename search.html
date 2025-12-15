@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search | The Roadmap</title>
+<link rel="icon" type="image/x-icon" href="compass_3.png">
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: "Times New Roman", serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.header img {
+    width: 90px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* ===== NAVIGATION BAR (FROM FIRST FILE) ===== */
+.navbar {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== SEARCH PAGE LAYOUT ===== */
+.search-layout {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* LEFT COLUMN — SEARCH */
+.search-box input[type="text"] {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+.search-controls {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.search-controls input {
+    margin-right: 5px;
+}
+
+.search-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: #555;
+}
+
+.results {
+    margin-top: 25px;
+}
+
+.result-item {
+    margin-bottom: 25px;
+}
+
+.result-item h3 {
+    margin-bottom: 5px;
+}
+
+.result-item a:hover h3 {
+    text-decoration: underline;
+}
+
+/* RIGHT COLUMN — RECENT ARTICLES */
+.recent-box {
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+}
+
+.recent-box h2 {
+    margin-top: 0;
+}
+
+.recent-link {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.recent-link:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<a href="The Roadmap index.html">
+<div class="header">
+    <img src="compass_3.png">
+    <div class="header-title">THE ROADMAP</div>
+</div>
+</a>
+
+<div class="subtitle">The Path of Others Becomes Your Future.</div>
+<br>
+
+<!-- NAV BAR -->
+<div class="navbar">
+    <div class="nav-left">
+        <a href="ourteam.html" class="nav-item">Our Team</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="stem.html" class="nav-item">STEM</a>
+        <a href="humanities.html" class="nav-item">Humanities</a>
+        <a href="sports.html" class="nav-item">Sports</a>
+        <a href="art.html" class="nav-item">Arts</a>
+        <a href="government.html" class="nav-item">Government</a>
+        <a href="hybrid.html" class="nav-item">Hybrid</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="search.html" class="nav-item"><strong>Search</strong></a>
+    </div>
+</div>
+
+<!-- SEARCH CONTENT -->
+<div class="search-layout">
+
+    <!-- LEFT -->
+    <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search articles or authors...">
+
+        <div class="search-controls">
+            <label><input type="radio" name="group" value="articles" checked> Articles</label>
+            <label><input type="radio" name="group" value="authors"> Authors</label>
+        </div>
+
+        <button class="search-button" onclick="performSearch()">Search</button>
+
+        <div class="results" id="results"></div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="recent-box">
+        <h2>Recent Articles</h2>
+
+        <a href="Dec_stem_Dr.Tsai.html" class="recent-link">Radiation Oncology: Advice and A Day in the Life</a>
+        <a href="Dec_arts_Sheldrick+Ilogu.html" class="recent-link">Riding the Wave: Bridging the Gap Between Art and Technology</a>
+        <a href="article-soccer-strategy.html" class="recent-link">Soccer and Strategy</a>
+        <a href="article-protest-photography.html" class="recent-link">Photography as Protest</a>
+        <a href="article-path-lawyer.html" class="recent-link">My Path to Becoming a Lawyer</a>
+    </div>
+
+</div>
+
+<script>
+const articles = [
+  {
+    title: "Radiation Oncology: Advice and A Day in the Life",
+    link: "Dec_stem_Dr.Tsai.html",
+    author: "Claire Chen '28",
+    snippet: "Dr. Henry Tsai '93 speaks about his path into radiation oncology."
+  },
+  {
+    title: "Riding the Wave: Bridging the Gap Between Art and Technology",
+    link: "Dec_arts_Sheldrick+Ilogu.html",
+    author: "Afra Miao '28",
+    snippet: "Alumni reflections on careers in art and tech."
+  }
+];
+
+function performSearch() {
+  const query = document.getElementById("searchInput").value.toLowerCase();
+  const mode = document.querySelector('input[name="group"]:checked').value;
+  const resultsDiv = document.getElementById("results");
+  resultsDiv.innerHTML = "";
+
+  if (!query.trim()) {
+    resultsDiv.innerHTML = "<p>Please enter a search term.</p>";
+    return;
+  }
+
+  let matches = articles.filter(a =>
+    mode === "articles"
+      ? a.title.toLowerCase().includes(query) || a.snippet.toLowerCase().includes(query)
+      : a.author.toLowerCase().includes(query)
+  );
+
+  if (!matches.length) {
+    resultsDiv.innerHTML = `<p>No results found for "${query}".</p>`;
+    return;
+  }
+
+  matches.forEach(a => {
+    resultsDiv.innerHTML += `
+      <div class="result-item">
+        <a href="${a.link}"><h3>${a.title}</h3></a>
+        <p><em>By ${a.author}</em></p>
+        <p>${a.snippet}</p>
+      </div>
+    `;
+  });
+}
+</script>
+
+</body>
+</html>
