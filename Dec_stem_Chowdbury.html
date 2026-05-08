@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Roadmap</title>
+<link rel="icon" type="image/x-icon" href="compass_3.png">
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-family: "Times New Roman", serif;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.header img {
+    width: 90px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== FEATURED ARTICLES ===== */
+.featured-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+.featured-box {
+    border: 2px solid black;
+    padding: 20px;
+    background: white;
+}
+
+.featured-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ===== 3-COLUMN LAYOUT ===== */
+.columns-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 0 40px 40px 40px;
+}
+
+/* ===== ARTICLE CARDS ===== */
+.article-preview {
+    border: 2px solid black;
+    padding: 15px;
+    background: #ffffff;
+    margin-bottom: 30px;
+}
+
+.article-preview img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.article-preview h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+/* Category label */
+.article-category {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ===== SECTION COLORS ===== */
+.stem       { background: #bcd9ff; color: #004a99; }
+.humanities { background: #ffcccc; color: #b30000; }
+.arts       { background: #ffdff1; color: #b7014a; }
+.sports     { background: #d9ffe4; color: #006600; }
+.hybrid     { background: #e0e0e0; color: #333333; }
+.government { background: #edbeff; color: #7700ae; }
+
+.news-article {
+    max-width: 720px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.news-title {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.news-byline {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.news-byline a {
+    color: #1a0dab;
+    text-decoration: underline;
+}
+
+.news-body p {
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+
+.news-article img.article-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 28px;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<!-- HEADER (CLICKABLE) -->
+<a href="index.html">
+<div class="header">
+    <img src="compass_3.png">
+    <div class="header-title">THE ROADMAP</div>
+</div>
+</a>
+
+<div class="subtitle">The Path of Others Becomes Your Future.</div>
+<br>
+
+<!-- NAVIGATION BAR -->
+<div class="navbar">
+
+    <div class="nav-left">
+        <a href="ourteam.html">Our Team</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="stem.html">STEM</a>
+        <a href="humanities.html">Humanities</a>
+        <a href="sports.html">Sports</a>
+        <a href="arts.html">Arts</a>
+        <a href="government.html">Government</a>
+        <a href="hybrid.html">Hybrid</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="search.html">Search</a>
+    </div>
+
+</div>
+
+<div class="news-article">
+    <img src="Dec_photos_Endoscopy.png" alt="Endoscopy" class="article-image">
+
+    <div class="news-title">
+        Gastroenterology: How Dr. Chowdbury Came to Love His Medical Career
+    </div>
+
+    <div class="news-byline">
+        <div class="article-meta">
+            <div class="meta-left">
+              <!--author name--> 
+              <span class="article-author">By Diya Chowdbury '29</span>
+            </div>
+            <div class="meta-right">
+              <!--article publication date--> 
+              <span class="article-date">December 2025</span>
+              <!--article category--> 
+              <span class="article-category stem">STEM</span>
+            </div>
+        </div>
+    </div>            
+
+
+    <div class="news-body">
+        <p>
+        Gastroenterology is the medical speciality focused on the digestive system through studying the functions and diseases of the esophagus, stomach, intestines, liver, pancreas, gallbladder, and bile ducts. Likewise, gastroenterologists diagnose and treat disorders of the digestive system through performing diagnostic and therapeutic endoscopic procedures and managing chronic conditions with medication and lifestyle advice. 
+        </p>
+        <p>
+        Dr. Bhanwarlal Chowdbury, a current primary care physician, who specialized previously in gastroenterology, was born into a strict family of farmers living in the outskirts of North India. Although he had dreams of becoming an engineer, with the strict expectations placed upon him by his father, he was forced into the medical field. However, although medicine wasn’t his first choice, he was able to find an in between that he loves. He “loves [his] profession and tells people that in the end, if [he] had to do it all over again, [he] would become a doctor.”
+        </p>
+
+        <p>
+        Originally, he was fascinated by endoscopic procedures, a common gastroenterology procedure where doctors take a scope to take a look at the digestive tract, which made him enter his path of gastroenterologist. 
+        </p>
+
+        <p>
+        Dr. Chowdbury completed medical school in Jaipur, India, followed by a residency in internal medicine in Trenton, New Jersey. Finally, he completed a fellowship in gastroenterology in Baltimore. In total, he has trained for 14 years to practice as a primary care physician, gastroenterologist, as well as a geriatrician, a doctor specializing in medical needs of the elderly.
+        </p>
+
+        <p>
+        For others who hope to enter this field, prerequisites for a gastroenterology fellowship are 4 years of college, followed by 4 years of medical school. Then, three years of residence in internal medicine. Finally, ending with a two to three year residency in a specialized area. As a very competitive program, it is very important for those who hope to enter the field of gastroenterology to have gone to a good medical school, enter into a residency program that has a GI (gastroenterology) program established already, a high USMLE score, and letters of recommendation.
+        </p>
+        
+        <p>
+        The weekly routine for a gastroenterologist is having patient visits throughout the week, around 20-30 patients a day, with a few operations per day per week. At the same time, they are called in as consultants for patients who are admitted for GI problems. Sometimes, it is possible to be called in in the middle of the night for operations.
+        </p>
+
+        <p>
+        Most commonly, Dr. Chowdbury is  needed for regular colon screenings, known as colonoscopy. This involves the use of a long, flexible tube, with a tiny video camera connected, that is inserted into the intestinal tract. This procedure is used to view the inside of the colon and diagnosis whether one has colon cancer or not. 
+        </p> 
+        
+        <p>
+        Regarding the future of the medical profession as well as medicine itself, Dr. Chowdhury is confident that “[medicine] will always be a very desirable profession for a lot of people, and the modern technology and innovations make medicine more exciting by reducing the burden of paperwork and documentation and hopefully allowing doctors to spend more time in direct patient care.” Overall, he believes “at the core of it is the patient-doctor relationship that makes medicine so rewarding.” He notes that it is one of the professions that allow people to “make a difference and help other lives while still being a well paid job.”
+        </p> 
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Roadmap</title>
+<link rel="icon" type="image/x-icon" href="compass_3.png">
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-family: "Times New Roman", serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.header img {
+    width: 90px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== FEATURED ARTICLES ===== */
+.featured-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+.featured-box {
+    border: 2px solid black;
+    padding: 20px;
+    background: white;
+}
+
+.featured-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ===== ARTICLE GRID (4 COLUMNS, VERTICAL SCROLL) ===== */
+.columns-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    padding: 40px;
+}
+
+/* ===== ARTICLE CARD (SKETCH STYLE) ===== */
+.article-preview {
+    border: 2px solid black;
+    padding: 15px;
+    background: #ffffff;
+}
+
+.article-preview img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: contain;
+    display: block;
+    border: 2px solid black;
+    padding: 0;
+    background: white;
+}
+
+.article-preview h2 {
+    font-size: 22px;
+    margin: 6px 0;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.article-category {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ===== SECTION COLORS ===== */
+.stem       { background: #bcd9ff; color: #004a99; }
+.humanities { background: #ffcccc; color: #b30000; }
+.arts       { background: #ffdff1; color: #b7014a; }
+.sports     { background: #d9ffe4; color: #006600; }
+.hybrid     { background: #e0e0e0; color: #333333; }
+.government { background: #edbeff; color: #7700ae; }
+
+.article-preview {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.article-preview:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.article-preview img {
+    transition: filter 0.15s ease;
+}
+
+.article-preview:hover img {
+    filter: brightness(0.97);
+}
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.meta-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+
+/* Stack articles nicely */
+.articles-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 16px;
+}
+
+/* Image behavior on mobile */
+.article-preview img {
+    max-height: 200px;
+    object-fit: contain;
+    border-width: 1.5px;
+}
+
+/* Article title */
+.article-preview h2 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+/* Metadata text */
+.article-preview .meta {
+    font-size: 0.9rem;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+@media (max-width: 480px) {
+    .article-preview img {
+        object-fit: cover;
+        max-height: 180px;
+    }
+}
+
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<a href="index.html">
+<div class="header">
+    <img src="compass_3.png">
+    <div class="header-title">THE ROADMAP</div>
+</div>
+</a>
+
+<div class="subtitle">The Path of Others Becomes Your Future.</div>
+<br>
+
+
+<!-- NAVIGATION BAR -->
+<div class="navbar">
+    <div class="nav-left">
+        <a href="ourteam.html">Our Team</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="stem.html">STEM</a>
+        <a href="humanities.html">Humanities</a>
+        <a href="sports.html">Sports</a>
+        <a href="arts.html">Arts</a>
+        <a href="government.html">Government</a>
+        <a href="hybrid.html">Hybrid</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="search.html">Search</a>
+    </div>
+</div>
+
+<!-- ARTICLE GRID -->
+<div class="columns-container">
+
+    <div class="article-preview">
+        <img src="Dec_photos_Spotify+Hollywood.png">
+        <h2>
+            <a href="Dec_arts_Sheldrick+Ilogu.html">
+                Riding the Wave: Bridging the Gap Between Art and Technology
+            </a>
+        </h2>
+        <div class="article-meta">
+            <span class="meta-author">By Afra Miao ’28</span>
+            <span class="meta-right">
+                <span class="meta-date">December 2025</span>
+            </span>
+        </div>
+        <p>Alumni Jon Sheldrick ‘04 and Toby Ilogu ‘19 on re-finding their Arts Careers.</p>
+    </div>
+
+    <div class="article-preview">
+        <img src="Dec_photos_PianoAccompanist.png">
+        <h2>
+            <a href="Dec_arts_Renoe.html">Career Spotlight: Piano Accompanist</a>
+        </h2>
+        <div class="article-meta">
+            <span class="meta-author">By Irene Fu ’27</span>
+            <span class="meta-right">
+                <span class="meta-date">December 2025</span>
+            </span>
+        </div>
+        <p>How Mr. Craig Renoe came to be the Lawrenceville School's beloved piano accompanist.</p>
+    </div>
+
+    <!-- duplicate cards as needed -->
+
+</div>
+
+</body>
+</html>

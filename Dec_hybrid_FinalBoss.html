@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Roadmap</title>
+<link rel="icon" type="image/x-icon" href="compass_3.png">
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-family: "Times New Roman", serif;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.header img {
+    width: 90px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== FEATURED ARTICLES ===== */
+.featured-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+.featured-box {
+    border: 2px solid black;
+    padding: 20px;
+    background: white;
+}
+
+.featured-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ===== 3-COLUMN LAYOUT ===== */
+.columns-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 0 40px 40px 40px;
+}
+
+/* ===== ARTICLE CARDS ===== */
+.article-preview {
+    border: 2px solid black;
+    padding: 15px;
+    background: #ffffff;
+    margin-bottom: 30px;
+}
+
+.article-preview img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.article-preview h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+/* Category label */
+.article-category {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ===== SECTION COLORS ===== */
+.stem       { background: #bcd9ff; color: #004a99; }
+.humanities { background: #ffcccc; color: #b30000; }
+.arts       { background: #ffdff1; color: #b7014a; }
+.sports     { background: #d9ffe4; color: #006600; }
+.hybrid     { background: #e0e0e0; color: #333333; }
+.government { background: #edbeff; color: #7700ae; }
+
+.news-article {
+    max-width: 720px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.news-title {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.news-byline {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.news-byline a {
+    color: #1a0dab;
+    text-decoration: underline;
+}
+
+.news-body p {
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+
+.news-article img.article-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 28px;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<!-- HEADER (CLICKABLE) -->
+<a href="index.html">
+<div class="header">
+    <img src="compass_3.png">
+    <div class="header-title">THE ROADMAP</div>
+</div>
+</a>
+
+<div class="subtitle">The Path of Others Becomes Your Future.</div>
+<br>
+
+<!-- NAVIGATION BAR -->
+<div class="navbar">
+
+    <div class="nav-left">
+        <a href="ourteam.html">Our Team</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="stem.html">STEM</a>
+        <a href="humanities.html">Humanities</a>
+        <a href="sports.html">Sports</a>
+        <a href="arts.html">Arts</a>
+        <a href="government.html">Government</a>
+        <a href="hybrid.html">Hybrid</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="search.html">Search</a>
+    </div>
+
+</div>
+
+<div class="news-article">
+    <img src="Dec_photos_Comics.png" alt="Comics" class="article-image">
+
+    <div class="news-title">
+        Final Boss: Best Place on Main Street That You Haven't Heard Of
+    </div>
+
+    <div class="news-byline">
+        <div class="article-meta">
+            <div class="meta-left">
+              <!--author name--> 
+              <span class="article-author">By Nina Morozova '27</span>
+            </div>
+            <div class="meta-right">
+              <!--article publication date--> 
+              <span class="article-date">December 2025</span>
+              <!--article category--> 
+              <span class="article-category hybrid">Hybrid</span>
+            </div>
+        </div>
+    </div>            
+
+
+    <div class="news-body">
+        <p>
+        Starting at the deepest end of Main Street, Final Boss is located in a split house shared with the Lawrenceville Vintage Treasures. Run by Floyd and Gryff, as the name suggests, Final Boss sells comics and games. Despite its relatively small size, with a few devoted hearts, the shop garnered a strong fan base, mainly due to how personal and friendly the Final Boss people are.
+        </p>
+
+        <p>
+        Final Boss comics was forged in 2007 and began as FJB Comics & Games, a local comic shop on York St. in downtown Jersey City. Originally, Floyd “was managing Duane Reade, stores in New York City” and not the comic book industry. However, as it often happens, “new management comes in and they don't appreciate the hard work you do.” So after leaving Duane Reade, Floyd opened up his own business in the form of FJB Comics & Games. The decision to make it a comic bookshop was obvious since he already liked such nerdy (affectionate) things, and it was best to have a job you actually enjoy doing, especially after leaving one you didn't.
+        </p>
+
+        <p>
+        Thus, FJB Comics & Games prospered in Jersey City. But in the words of the owners themselves, “Then everything changed when the Fire Nation attacked. A tree fell, snapped power lines, which set our store on fire, and shut us down.” After moving to Coles St. and becoming the #1 entertainment store in New Jersey, they were immortalized in Ms. Marvel Vol 3., issue 6. But once again, “disaster struck Coles Street, leaving a crater where once stood our store. We knew we needed to level up one final time! Thus, out of the flames, we were reborn in Lawrenceville, New Jersey, where we shall remain the Final Boss and your final stop for entertainment!”
+        </p>
+
+        <p>
+        So now Final Boss isn't just a hub for “entertainment”; it's an important part of the Lawrenceville community. Both owners are friendly to a fault and incredibly easy to talk to; at times people come in just to chat without buying anything. Free comic book day happens there, a big giveaway of both free comics and heavy discounts on the new ones. It feels like a small holiday each time. Gryff and Floyd arrange signings with popular authors that happen in the store on Saturdays. An update of new comics is posted consistently every Wednesday on their Instagram, and said comics are put to the side if someone can't get them on release day. They also have a YouTube channel where they discuss new releases if you want a professional opinion. Final Boss provides not just a place to buy comics, but a place to talk about them. From personal experience, you will love just talking to everyone there, both owners and customers.
+        </p>
+
+        <p>
+        This friendliness isn’t just customer-oriented. They actively collaborate with neighboring shops such as Ooika and Gingered Peach. When asked, Floyd emphasized that “as a store keep, you should collaborate with each other”. This collaboration isn't to boost sale or for anything commercial; it's just a friendly relationship between the workers. Monthly book clubs are hosted just for the people in the Lawrenceville town, including some store owners. The same goes for other events like tabletop nights, like DND or card games like Magic: The Gathering. Mark, the owner of Ooika, actually has a divorced dad deck, and when mango was still an add-on in Ooika, you could get a secret “Final Boss matcha” that mixed strawberry and mango together. Not only that, their connections reach Princeton, as there is an annual Princeton's Creative hosted by Final Boss.
+        </p>
+
+        <p>
+        When Gryff was asked if he likes working in comic books, the answer was “no” because he “loves working in comic books.” Both of them enjoy the company of people who have the same nerdy interests, and running this store gives them an easier opportunity to organize said people. If not already evident, Final Boss isn't trying to be a money making giant of the industry, it's here to provide others with comics and an easier time finding their people.
+        </p>
+        
+        <p>
+        There is so much more about Final Boss to talk about. So please, if you have a spare 20 minutes, go come visit the shop. Maybe they’ll make you fall in love with them. Maybe you’ll pick up manga. Either way, if you meet a group of 3 very loud kids, give them a pack of Pokémon cards; they are the Carter Crew, and they use the shop as a playground after school.
+        </p>        
+    </div>
+
+</div>
+
+
+</body>
+</html>

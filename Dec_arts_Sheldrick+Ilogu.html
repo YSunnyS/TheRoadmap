@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Roadmap</title>
+<link rel="icon" type="image/x-icon" href="compass_3.png">
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-family: "Times New Roman", serif;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.header img {
+    width: 90px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== FEATURED ARTICLES ===== */
+.featured-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+.featured-box {
+    border: 2px solid black;
+    padding: 20px;
+    background: white;
+}
+
+.featured-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ===== 3-COLUMN LAYOUT ===== */
+.columns-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 0 40px 40px 40px;
+}
+
+/* ===== ARTICLE CARDS ===== */
+.article-preview {
+    border: 2px solid black;
+    padding: 15px;
+    background: #ffffff;
+    margin-bottom: 30px;
+}
+
+.article-preview img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.article-preview h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+/* Category label */
+.article-category {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ===== SECTION COLORS ===== */
+.stem       { background: #bcd9ff; color: #004a99; }
+.humanities { background: #ffcccc; color: #b30000; }
+.arts       { background: #ffdff1; color: #b7014a; }
+.sports     { background: #d9ffe4; color: #006600; }
+.hybrid     { background: #e0e0e0; color: #333333; }
+.government { background: #edbeff; color: #7700ae; }
+
+.news-article {
+    max-width: 720px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.news-title {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.news-byline {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.news-byline a {
+    color: #1a0dab;
+    text-decoration: underline;
+}
+
+.news-body p {
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+
+.news-article img.article-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 28px;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<!-- HEADER (CLICKABLE) -->
+<a href="index.html">
+<div class="header">
+    <img src="compass_3.png">
+    <div class="header-title">THE ROADMAP</div>
+</div>
+</a>
+
+<div class="subtitle">The Path of Others Becomes Your Future.</div>
+<br>
+
+<!-- NAVIGATION BAR -->
+<div class="navbar">
+
+    <div class="nav-left">
+        <a href="ourteam.html">Our Team</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="stem.html">STEM</a>
+        <a href="humanities.html">Humanities</a>
+        <a href="sports.html">Sports</a>
+        <a href="arts.html">Arts</a>
+        <a href="government.html">Government</a>
+        <a href="hybrid.html">Hybrid</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="search.html">Search</a>
+    </div>
+
+</div>
+
+<div class="news-article">
+    <img src="Dec_photos_Spotify+Hollywood.png" alt="Spotify and Hollywood" class="article-image">
+
+    <div class="news-title">
+        Riding the Wave: Bridging the Gap Between Art and Technology
+    </div>
+
+    <div class="news-byline">
+        <div class="article-meta">
+            <div class="meta-left">
+              <!--author name--> 
+              <span class="article-author">By Afra Miao '28</span>
+            </div>
+            <div class="meta-right">
+              <!--article publication date--> 
+              <span class="article-date">December 2025</span>
+              <!--article category--> 
+              <span class="article-category arts">Arts</span>
+            </div>
+        </div>
+    </div>            
+
+
+    <div class="news-body">
+        <p>
+        For Jon Sheldrick ‘04 and Toby Ilogu ‘19, the key to building a career in modern media is “riding the wave.” Constant reinvention, rejecting stagnation, and dipping your toes into the water—even if the tide feels unfamiliar or risky. 
+        </p>
+
+        <p>
+        It’s this mindset that has kept these two alumni ahead of the curve. 
+        </p>
+
+        <p>
+        Sheldrick, who works at Spotify as a Senior Product Manager, actually started his journey at Lawrenceville as a performer in various bands and could “never think of [him]self as a software person.” Interestingly, Sheldrick now interacts with technology and AI on a daily basis. 
+        </p>
+
+        <p>
+        Sheldrick was first introduced to sound design as a performer in high school, recording his own music. However, with studio roles filled and the audio engineering industry slowing, he struggled to find a career after college with his music technology major. Thankfully, a budding wave emerged at the time: streaming. Despite his limited experience in this novel market, Sheldrick recognized that his ADR and sound design skills were “easily transferable.” By using differences in order to seize new opportunities and capitalizing on similarities between the two career paths, Sheldrick launched himself into a more dynamic career working for Vimeo, Instagram, and now Spotify.
+        </p>
+
+        <p>
+        As a Senior Product Manager, Sheldrick specializes in riding the popular flow and cultivating the next big wave. For example, the short, looping videos artists add to their mobile tracks, known as the “Canvas” project is one of the many Spotify project Sheldrick has helped launched. Before joining Spotify, Sheldrick worked for Instagram when he helped pilot the now signature “Stories” feature. Summing up his experience, he emphasizes the importance of flexibility; music, and especially technology’s influence on it, is an ever-changing space. “Every time you see one of these technologies emerging, just immerse yourself in it,” Sheldrick remarked, “even if it ends up not being important or interesting.” Media trends are unpredictable, so catching every possible wave is crucial to avoid being “left behind.”
+        </p>
+
+        <p>
+        Ilogu—a more recent graduate from Lawrenceville—rode his own wave of individualized content creation and film direction. He graduated from film school at the University of Southern California during COVID-19 and a massive writers' strike, severely limiting his job options. Recalling his experience, Ilogu explains he “felt defeated in so many ways” and “just wanted to go home.” 
+        </p>
+        
+        <p>
+        Even at this depressing time, Ilogu experimented and adapted by dabbling in dropshipping and Twitch streaming. Although he didn’t enjoy either, he felt he “need[ed] to keep trying” and is glad he realized that type of work wasn’t for him. Ilogu eventually secured an internship at Fuzzy Door Productions (famous for shows like Family Guy) as an Office Production Assistant. In this position, he realized the stagnant, hierarchical nature of Hollywood, which reinforced his conviction in shifting toward self-employed or smaller-scale content creation. “That’s what’s actually going to move the needle,” Ilogu said, “not just staying at a desk for five years” until someone promotes you. One piece of actionable advice Ilogu provided to assist Lawrentians in riding the wave is creating a LinkedIn account. According to Ilogu, actively reaching out to interesting professionals can help build connections and get an earlier sense of one’s future. 
+        </p>
+
+        <p>
+        Looking forward, both Ilogu and Sheldrick agree that the next big change to the media and music space is AI. And while both are actively incorporating AI in their own work today, this is the wave that the upcoming batch of Lawrenceville alumni will surf.         
+        </p>
+        
+    </div>
+
+</div>
+
+
+</body>
+</html>

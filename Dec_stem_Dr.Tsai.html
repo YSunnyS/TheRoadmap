@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Roadmap</title>
+<link rel="icon" type="image/x-icon" href="compass_3.png">
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-family: "Times New Roman", serif;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.header img {
+    width: 90px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== FEATURED ARTICLES ===== */
+.featured-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+.featured-box {
+    border: 2px solid black;
+    padding: 20px;
+    background: white;
+}
+
+.featured-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ===== 3-COLUMN LAYOUT ===== */
+.columns-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 0 40px 40px 40px;
+}
+
+/* ===== ARTICLE CARDS ===== */
+.article-preview {
+    border: 2px solid black;
+    padding: 15px;
+    background: #ffffff;
+    margin-bottom: 30px;
+}
+
+.article-preview img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.article-preview h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+/* Category label */
+.article-category {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ===== SECTION COLORS ===== */
+.stem       { background: #bcd9ff; color: #004a99; }
+.humanities { background: #ffcccc; color: #b30000; }
+.arts       { background: #ffdff1; color: #b7014a; }
+.sports     { background: #d9ffe4; color: #006600; }
+.hybrid     { background: #e0e0e0; color: #333333; }
+.government { background: #edbeff; color: #7700ae; }
+
+.news-article {
+    max-width: 720px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.news-title {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.news-byline {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.news-byline a {
+    color: #1a0dab;
+    text-decoration: underline;
+}
+
+.news-body p {
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+
+.news-article img.article-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 28px;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<!-- HEADER (CLICKABLE) -->
+<a href="The Roadmap index.html">
+<div class="header">
+    <img src="compass_3.png">
+    <div class="header-title">THE ROADMAP</div>
+</div>
+</a>
+
+<div class="subtitle">The Path of Others Becomes Your Future.</div>
+<br>
+
+<!-- NAVIGATION BAR -->
+<div class="navbar">
+
+    <div class="nav-left">
+        <a href="ourteam.html">Our Team</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="stem.html">STEM</a>
+        <a href="humanities.html">Humanities</a>
+        <a href="sports.html">Sports</a>
+        <a href="arts.html">Arts</a>
+        <a href="government.html">Government</a>
+        <a href="hybrid.html">Hybrid</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="search.html">Search</a>
+    </div>
+
+</div>
+
+<div class="news-article">
+    <img src="Dec_photos_Dr. Tsai.png" alt="Dr. Henry K. Tsai" class="article-image">
+
+    <div class="news-title">
+        Radiation Oncology: Advice and A Day in the Life
+    </div>
+
+    <div class="news-byline">
+        <div class="article-meta">
+            <div class="meta-left">
+              <!--author name--> 
+              <span class="article-author">By Claire Chen '28</span>
+            </div>
+            <div class="meta-right">
+              <!--article publication date--> 
+              <span class="article-date">December 2025</span>
+              <!--article category--> 
+              <span class="article-category stem">STEM</span>
+            </div>
+        </div>
+    </div>            
+
+
+    <div class="news-body">
+        <h2>Radiation Oncology
+        </h2>
+        <p>
+        Radiation oncology is a field of medicine that treats cancer patients through the use of ionizing radiation to destroy cancer cells while minimizing damage to healthy organs. Radiation oncologists are the physician specialists who help patients create a personalized radiation treatment plan and oversee the treatments. The radiation oncology team includes radiation oncologists, radiation oncology nurses who support and care for patients, medical physicists and dosimetrists who use advanced computer software to plan and ensure the accuracy of the treatment, and radiation therapists who deliver the daily treatments. Together, they work collaboratively as a team to create individualized treatment plans for patients.
+        </p>
+
+        <h2>Career Path</h2>
+        <p>
+        Dr. Henry K. Tsai ‘93 is a radiation oncologist based in central New Jersey and is affiliated with several hospitals in the area. After graduating from Lawrenceville, he went to Harvard University and earned an undergraduate degree in Biology and a medical degree from Harvard Medical School. He completed his residency at the Harvard Radiation Oncology Program where he was named chief resident.
+        </p>
+
+        <p>
+        Dr. Tsai’s interest in a career in medicine started with exposure from his father, who was also a doctor. He was inspired by seeing his father “treating patients in the office, fielding their calls at night, and caring for them when they were admitted to the hospital.” At Lawrenceville, he was inspired by his science teachers to pursue a career related to science. Dr. Tsai studied biology at Harvard and managed a long-term laboratory research project during his four undergraduate years, which further strengthened his interest in science and medicine. He then went on to Harvard Medical School... “During rotations I became interested in radiation oncology.” He developed this interest because it allowed him to combine his interest in using new technologies with being a good doctor and helping patients with the difficult diagnosis.
+        </p>
+
+        <p>
+        During his final year of medical school, Dr. Tsai applied to residency programs, and he was matched with a residency at the Harvard Radiation Oncology Program. The match process required writing essays, interviewing, ranking programs, and eventually securing a position. The radiation oncology program, which is highly competitive, “[requires] a one year medical internship and then a four-year residency training focused on radiation oncology.”
+        </p>
+
+        <h2>A Day in Radiation Oncology</h2>
+        <p>
+        As of now, Dr. Tsai is a radiation oncologist working in multiple hospitals and outpatient offices. His work offers remarkable day-to-day variety. No two days look exactly the same: “That’s part of the reason why I like my field—every day is a little bit different.”
+        </p>
+
+        <p>
+        His daily schedule can include new patient consultations, treatment planning, supervision of radiation therapy sessions, long-term follow-ups, and even minor procedures such as placing fiducial markers into organs. Some of the most common cancers he treats include breast cancer, prostate cancer, lung cancer, and brain tumors. Each new cancer patient interaction begins with a consultation: “At this initial appointment, I review their records, look at imaging, speak with other specialists, explain how many treatments they need, what to expect, and side effects.” These meetings often last over an hour and require skills such as communication and empathy.
+        </p>
+        
+        <p>
+        Once a patient decides to move forward with radiation therapy, the next step is radiation mapping or “simulation,” which is done using CT scans. Working closely with dosimetrists and physicists, he designs the radiation plan for the patient. He states that unlike the past,“nowadays with computer systems, you can see the whole body, target the cancer, see where the normal organs are, and come up with an optimal plan.”
+        </p>
+
+        <p>
+        Radiation treatments typically unfold over several weeks. “During that time I see my patients… managing symptoms and side effects.” Even after patients complete their treatment, his work with them continues with additional appointments to check in on them and make sure they are connected to the right doctors. He states that “I have patients I treated over 5 to 10 years ago who still come back to see me.” He emphasizes that patient care is never just medical: “There’s the physical part, but also the emotional and social part... Patients need to feel they’re cared for and that you’re personally invested in their treatment success.”
+        </p>
+
+        <p>
+        Beyond his primary clinical responsibilities, he also remains involved in research by continuing to offer his patients enrollment in clinical trials and mentoring students. He stresses that balancing all of this requires multitasking skills, the same skills he first honed in high school.
+        </p>
+        
+        <h2>Advice for Students</h2>
+        <p>
+        Dr. Tsai states that the most important quality for people entering the medical  field is that they must be truly interested in caring for patients. Doctors are always working and communicating with patients to understand not only the physical symptoms but also to get to know them personally, building trust and tailoring care to their needs. Dr. Tsai’s advice for students interested in medicine is to begin by gaining exposure to real clinical settings—“It’s important to understand if this is the right environment for you—volunteering, shadowing, or interacting with patients.” These experiences will give students a sense of the clinical experience and confirm if they have true interest in the field. He also stresses the value of curiosity and being open-minded to explore different options, reminding them that “being a doctor isn’t the only way to be involved in medicine... There are many important roles.” He also highlights the importance of having research experience, noting that “research demonstrates that you have a true interest in advancing the field.”
+        </p>
+        
+    </div>
+
+</div>
+
+
+</body>
+</html>

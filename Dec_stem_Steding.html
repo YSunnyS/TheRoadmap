@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Roadmap</title>
+<link rel="icon" type="image/x-icon" href="compass_3.png">
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-family: "Times New Roman", serif;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.header img {
+    width: 90px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== FEATURED ARTICLES ===== */
+.featured-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+.featured-box {
+    border: 2px solid black;
+    padding: 20px;
+    background: white;
+}
+
+.featured-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ===== 3-COLUMN LAYOUT ===== */
+.columns-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 0 40px 40px 40px;
+}
+
+/* ===== ARTICLE CARDS ===== */
+.article-preview {
+    border: 2px solid black;
+    padding: 15px;
+    background: #ffffff;
+    margin-bottom: 30px;
+}
+
+.article-preview img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.article-preview h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+/* Category label */
+.article-category {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ===== SECTION COLORS ===== */
+.stem       { background: #bcd9ff; color: #004a99; }
+.humanities { background: #ffcccc; color: #b30000; }
+.arts       { background: #ffdff1; color: #b7014a; }
+.sports     { background: #d9ffe4; color: #006600; }
+.hybrid     { background: #e0e0e0; color: #333333; }
+.government { background: #edbeff; color: #7700ae; }
+
+.news-article {
+    max-width: 720px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.news-title {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.news-byline {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.news-byline a {
+    color: #1a0dab;
+    text-decoration: underline;
+}
+
+.news-body p {
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+
+.news-article img.article-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 28px;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<!-- HEADER (CLICKABLE) -->
+<a href="index.html">
+<div class="header">
+    <img src="compass_3.png">
+    <div class="header-title">THE ROADMAP</div>
+</div>
+</a>
+
+<div class="subtitle">The Path of Others Becomes Your Future.</div>
+<br>
+
+<!-- NAVIGATION BAR -->
+<div class="navbar">
+
+    <div class="nav-left">
+        <a href="ourteam.html">Our Team</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="stem.html">STEM</a>
+        <a href="humanities.html">Humanities</a>
+        <a href="sports.html">Sports</a>
+        <a href="arts.html">Arts</a>
+        <a href="government.html">Government</a>
+        <a href="hybrid.html">Hybrid</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="search.html">Search</a>
+    </div>
+
+</div>
+
+<div class="news-article">
+    <img src="Dec_photos_Airplane.png" alt="Airplane" class="article-image">
+
+    <div class="news-title">
+        Transitioning between Piloting and diving deep into Aerospace Engineering: The Story of Grayson Steding ‘06
+    </div>
+
+    <div class="news-byline">
+        <div class="article-meta">
+            <div class="meta-left">
+              <!--author name--> 
+              <span class="article-author">By Jiayi Ye '27</span>
+            </div>
+            <div class="meta-right">
+              <!--article publication date--> 
+              <span class="article-date">December 2025</span>
+              <!--article category--> 
+              <span class="article-category stem">STEM</span>
+            </div>
+        </div>
+    </div>            
+
+
+    <div class="news-body">
+        <p>
+        Grayson Steding ‘06 built a remarkable career in aviation from designing aircraft mechanical systems at Comlux Aviation to serving as a Mission Check Pilot and Director of Maintenance with the Civil Air Patrol, where he coordinated search and rescue operations across multiple states. He's currently working at Greenpoint Technologies as the Director of Client Support.        
+        </p>
+        <p>
+        Steding began his interest in planes in high school at Lawrenceville. During high school, he looked for opportunities to experience and become professional in aviation by reaching out to the Civil Air Portal at Princeton. After communicating with the school about being able to keep a car, he was able to go every Sunday to practice piloting. There, he got his license and later on, after college, assisted with government aviation practices in Washington D.C. as target practice.
+        </p>
+
+        <p>
+        After graduating from Lawrenceville in 2006, he went to Purdue University as an engineering major student. However, at Purdue University, Steding realized that he was more motivated by hands-on design and applied engineering rather than theoretical analysis, which caused him to shift from engineering to aeronautical engineering technology. This decision of changing majors was an important turning point in Steding’s career development, allowing him to graduate prepared to work with real aircraft systems.
+        </p>
+
+        <p>
+        For aerospace engineering, at least a bachelor’s degree is required with skills of calculus, physics, critical thinking, and more. 
+        </p>
+
+        <p>
+        After learning the basics in college, Steding joined the Comlux Aviation serving as a Mission Check Pilot and Director of Maintenance with the Civil Air Patrol, which strengthened his experience of checking planes’ designs. While still working as a pilot, his most common job was transferring pets and animals. 
+        </p>
+        
+        <p>
+        Later on, Steding began his career at Greenpoint technology and has worked there for more than 8 years. When we asked about the most unusual design of airplane he had ever worked with, he spoke of airplanes created using drawing clipboards and bathtubs. These unique requirements show us how engineering works with specific goals, and how engineers like Steding must balance innovation and customers requirements with aviation safety.
+        </p>
+
+        <p>
+        For high schoolers and even younger teenagers who are interested in careers in flying, Steding recommended joining the Youth Cadet program of the Civil Air Patrol for chances to learn and practice flying early on. While learning the basics of flying, they also teach others the necessary skills of a pilot: leadership, self-confidence, and discipline. 
+        </p>        
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Roadmap</title>
+<link rel="icon" type="image/x-icon" href="compass_3.png">
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-family: "Times New Roman", serif;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.header img {
+    width: 90px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== FEATURED ARTICLES ===== */
+.featured-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+.featured-box {
+    border: 2px solid black;
+    padding: 20px;
+    background: white;
+}
+
+.featured-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ===== 3-COLUMN LAYOUT ===== */
+.columns-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 0 40px 40px 40px;
+}
+
+/* ===== ARTICLE CARDS ===== */
+.article-preview {
+    border: 2px solid black;
+    padding: 15px;
+    background: #ffffff;
+    margin-bottom: 30px;
+}
+
+.article-preview img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.article-preview h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+/* Category label */
+.article-category {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ===== SECTION COLORS ===== */
+.stem       { background: #bcd9ff; color: #004a99; }
+.humanities { background: #ffcccc; color: #b30000; }
+.arts       { background: #ffdff1; color: #b7014a; }
+.sports     { background: #d9ffe4; color: #006600; }
+.hybrid     { background: #e0e0e0; color: #333333; }
+.government { background: #edbeff; color: #7700ae; }
+
+.news-article {
+    max-width: 720px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.news-title {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.news-byline {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.news-byline a {
+    color: #1a0dab;
+    text-decoration: underline;
+}
+
+.news-body p {
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+
+.news-article img.article-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 28px;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<!-- HEADER (CLICKABLE) -->
+<a href="index.html">
+<div class="header">
+    <img src="compass_3.png">
+    <div class="header-title">THE ROADMAP</div>
+</div>
+</a>
+
+<div class="subtitle">The Path of Others Becomes Your Future.</div>
+<br>
+
+<!-- NAVIGATION BAR -->
+<div class="navbar">
+
+    <div class="nav-left">
+        <a href="ourteam.html">Our Team</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="stem.html">STEM</a>
+        <a href="humanities.html">Humanities</a>
+        <a href="sports.html">Sports</a>
+        <a href="arts.html">Arts</a>
+        <a href="government.html">Government</a>
+        <a href="hybrid.html">Hybrid</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="search.html">Search</a>
+    </div>
+
+</div>
+
+<div class="news-article">
+    <img src="Feb_photos_GlobalFoundries.jpg" alt="Airplane" class="article-image">
+
+    <div class="news-title">
+        From Physics to Engineering: Dr. Zhang’s Path
+    </div>
+
+    <div class="news-byline">
+        <div class="article-meta">
+            <div class="meta-left">
+              <!--author name--> 
+              <span class="article-author">By Nigel Li '27 (Emma Willard School)</span>
+            </div>
+            <div class="meta-right">
+              <!--article publication date--> 
+              <span class="article-date">February 2025</span>
+              <!--article category--> 
+              <span class="article-category stem">STEM</span>
+            </div>
+        </div>
+    </div>            
+
+
+    <div class="news-body">
+        <p>
+        Dr. Xiaoxiao Zhang is a technical lead working at GlobalFoundries, a global semiconductor manufacturer. Her specific role is currently in 45-nanometer silicon photonics technology, where she is developing new technology that will provide high-speed data transportation for artificial intelligence (AI) applications using photonic signals. She has had 13 years of work experience within the company and everyday is busy to the point that it is hard to process what has happened. 
+        </p>
+
+        <p>
+        Zhang started her undergraduate education at Nanjing University as a physics major. Once she moved to the United States, she began her graduate studies at the University of California, Los Angeles (UCLA), majoring in mechanical engineering. According to Dr. Zhang, she got into engineering because “[she] had always been good at STEM. And then, among all the STEM subjects, math and physics [have] been [her] strongest.” During the early 2000s, Zhang found that all of her fellow physics majors “either became … professors in academia, or they became semiconductor workers.” Zhang remarks that her mechanical engineering program was very competitive to get into at the time as many students flocked towards it, with her remarking that connections with professors were extremely important in this aspect. 
+        </p>
+
+        <p>
+        Alongside developing new technologies, Zhang also handles internship applications to GlobalFoundries. She regards that when looking at these resumes, “you can only see objective facts … which kinda school they go to, what major they went through, what projects they were involved in, and then what’s their GPA.” She then remarks that the interviews, as the next phase, help her confirm certain things and observe the soft skills (i.e. communication, leadership, etc.) of a candidate. 
+        </p>
+        <p>
+        “Then during the interview, you look at people’s communication skills … how well they can articulate and then how detailed they can talk about their own projects,” Zhang said. “That shows that they actually did think, plan, and work through all the problems. Some people just, you know, participated in the group project, and then they just [write] it as their own project … you can tell when you try to ask the detailed questions.”
+        </p>
+
+        <p>
+        Zhang continues to say that soft skills and technical skills can be equally important in the semiconductor industry, depending on the role someone takes on. She comments that there are roles that require stronger people skills and roles that require stronger technical skills, but she finds that the people with the most longevity in the company have been those “with very good people skills and a very solid technical foundation, with a kind heart … to help others.” However, she also warns about standing firm in not letting others push tasks onto you. 
+        </p>
+        
+        <p>
+        According to Zhang, “when we talk about people skills, we might just intuitively think that [you should] be friendly to people, you know, make people like you, this and that. But it's actually not … A big part of this actually is to say no.” Zhang stresses that in a team and corporate environment, all types of ambiguity can be found during cross-collaboration. It is with this ambiguity of who is doing what that people will start to push the responsibilities onto you if the details are not specifically defined. It is unsustainable to continually take on the burden of others, so you must learn how to clearly and politely say no. 
+        </p>
+
+        <p>
+        “From what I understand … good leadership should always clear ambiguity. Ambiguity is the root cause for lack of productivity. Because if there's ambiguity, nobody's gonna do it, right? Unless there's a clear definition of a … role and responsibility … “ Zhang emphasizes that, “a lot of these are not taught in school. A technical thing, you can learn from  [the] Internet, from school, but all of these other things come from intuitive self learning.”
+        </p>        
+    </div>
+
+</div>
+
+
+</body>
+</html>

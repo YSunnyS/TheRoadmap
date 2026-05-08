@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search | The Roadmap</title>
+<link rel="icon" type="image/x-icon" href="compass_3.png">
+
+<style>
+
+/* ===== GLOBAL ===== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: "Times New Roman", serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.header img {
+    width: 90px;
+    margin-right: 18px;
+}
+
+.header-title {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* ===== NAVIGATION BAR (MATCHES INDEX) ===== */
+.navbar {
+    width: 100%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-center {
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-left,
+.nav-right {
+    flex-shrink: 0;
+}
+
+.navbar a:hover {
+    font-weight: bold;
+}
+
+/* ===== SEARCH PAGE LAYOUT ===== */
+.search-layout {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* SEARCH BOX */
+.search-box input[type="text"] {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+.search-controls {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.search-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: #555;
+}
+
+/* RECENT ARTICLES */
+.recent-box {
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+}
+
+.recent-link {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.recent-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== MOBILE — SHRINK, SAME ROW ===== */
+@media (max-width: 768px) {
+
+    .header img {
+        width: 55px;
+        margin-right: 10px;
+    }
+
+    .header-title {
+        font-size: 38px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        padding: 0 12px;
+    }
+
+    .navbar {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+
+    .nav-left,
+    .nav-center,
+    .nav-right {
+        gap: 12px;
+    }
+
+    .search-layout {
+        grid-template-columns: 1fr;
+        padding: 24px 16px;
+        gap: 30px;
+    }
+
+    .recent-box {
+        border-left: none;
+        border-top: 1px solid #ccc;
+        padding-top: 20px;
+        padding-left: 0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<a href="index.html">
+<div class="header">
+    <img src="compass_3.png" alt="Compass">
+    <div class="header-title">THE ROADMAP</div>
+</div>
+</a>
+
+<div class="subtitle">The Path of Others Becomes Your Future.</div>
+
+<br>
+
+<!-- NAV BAR -->
+<div class="navbar">
+    <div class="nav-left">
+        <a href="ourteam.html">Our Team</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="stem.html">STEM</a>
+        <a href="humanities.html">Humanities</a>
+        <a href="sports.html">Sports</a>
+        <a href="arts.html">Arts</a>
+        <a href="government.html">Government</a>
+        <a href="hybrid.html">Hybrid</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="search.html"><strong>Search</strong></a>
+    </div>
+</div>
+
+<!-- SEARCH CONTENT -->
+<div class="search-layout">
+
+    <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search articles or authors...">
+
+        <div class="search-controls">
+            <label><input type="radio" name="group" value="articles" checked> Articles</label>
+            <label><input type="radio" name="group" value="authors"> Authors</label>
+        </div>
+
+        <button class="search-button" onclick="performSearch()">Search</button>
+
+        <div class="results" id="results"></div>
+    </div>
+
+    <div class="recent-box">
+        <h2>Recent Articles</h2>
+
+        <a href="Dec_stem_Dr.Tsai.html" class="recent-link">Radiation Oncology: Advice and A Day in the Life</a>
+        <a href="Dec_arts_Sheldrick+Ilogu.html" class="recent-link">Riding the Wave: Bridging the Gap Between Art and Technology</a>
+        <a href="Dec_stem_Steding.html" class="recent-link">Transitioning between Piloting and Aerospace Engineering</a>
+        <a href="Dec_arts_Renoe.html" class="recent-link">Career Spotlight: Piano Accompanist</a>
+        <a href="Dec_stem_Chowdbury.html" class="recent-link">Gastroenterology: How Dr. Chowdbury Came to Love His Medical Career</a>
+        <a href="Dec_hybrid_FinalBoss.html" class="recent-link">Final Boss: Best Place on Main Street</a>
+        <a href="Feb_stem_Zhang.html" class="recent-link">From Physics to Engineering: Dr. Zhang’s Path</a>
+    </div>
+
+</div>
+
+<script>
+const articles = [
+{
+    title: "Radiation Oncology: Advice and A Day in the Life",
+    link: "Dec_stem_Dr.Tsai.html",
+    author: "Claire Chen '28",
+    snippet: "Dr. Henry Tsai '93 speaks about his path into radiation oncology."
+  },
+  {
+    title: "Riding the Wave: Bridging the Gap Between Art and Technology",
+    link: "Dec_arts_Sheldrick+Ilogu.html",
+    author: "Afra Miao '28",
+    snippet: "Alumni reflections on careers in art and tech."
+  },
+  {
+    title: "Transitioning between Piloting and diving deep into Aerospace Engineering: The Story of Grayson Steding ‘06",
+    link: "Dec_stem_Steding",
+    author: "Jiayi Ye '27",
+    snippet: "Grayson Steding '06 on his career transition and re-directing his passions."
+  },
+
+  {
+    title: "Career Spotlight: Piano Accompanist",
+    link: "Dec_arts_Renoe.html",
+    author: "Irene Fu '27",
+    snippet: "How Mr. Craig Renoe came to be the Lawrenceville School's beloved piano accompanist."
+  },
+  {
+    title: "Gastroenterology: How Dr. Chowdbury Came to Love His Medical Career",
+    link: "Dec_stem_Chowbury.html",
+    author: "Diya Chowdbury '29",
+    snippet: "How Dr. Chowdbury found joy in his job and turned something forced upon him into his passion."
+  },
+  {
+    title: "Final Boss: Best Place on Main Street That You Haven't Heard Of",
+    link: "Dec_hybrid_FinalBoss.html",
+    author: "Nina Morozova '27",
+    snippet: "Introducing Final Boss, the comic store on Main Street, and its past that has never been told before."
+  }
+  {
+    title: "From Physics to Engineering: Dr. Zhang’s Path",
+    link: "Feb_stem_Zhang.html",
+    author: "Nigel Li '27 (Emma Willard School)",
+    snippet: "Dr. Xiaoxiao Zhang, a technical lead at GlobalFoundries, shares her journey from studying physics to working in semiconductor engineering."
+  }
+
+];
+
+function performSearch() {
+  const query = document.getElementById("searchInput").value.toLowerCase();
+  const mode = document.querySelector('input[name="group"]:checked').value;
+  const resultsDiv = document.getElementById("results");
+  resultsDiv.innerHTML = "";
+
+  if (!query.trim()) {
+    resultsDiv.innerHTML = "<p>Please enter a search term.</p>";
+    return;
+  }
+
+  const matches = articles.filter(a =>
+    mode === "articles"
+      ? a.title.toLowerCase().includes(query) || a.snippet.toLowerCase().includes(query)
+      : a.author.toLowerCase().includes(query)
+  );
+
+  if (!matches.length) {
+    resultsDiv.innerHTML = `<p>No results found for "${query}".</p>`;
+    return;
+  }
+
+  matches.forEach(a => {
+    resultsDiv.innerHTML += `
+      <div class="result-item">
+        <a href="${a.link}"><h3>${a.title}</h3></a>
+        <p><em>By ${a.author}</em></p>
+        <p>${a.snippet}</p>
+      </div>
+    `;
+  });
+}
+</script>
+
+</body>
+</html>
