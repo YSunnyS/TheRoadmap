@@ -142,13 +142,196 @@ a { text-decoration: none; color: inherit; }
 .hybrid     { background: #e0e0e0; color: #333333; }
 .government { background: #edbeff; color: #7700ae; }
 
+/* =========================
+   GLOBAL RESPONSIVENESS
+   ========================= */
+
+   * {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   LAYOUT CONTAINMENT
+   ========================= */
+
+.page-wrapper,
+.main-content {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* =========================
+   ARTICLES GRID
+   ========================= */
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+/* =========================
+   ARTICLE CARD
+   ========================= */
+
+.article-preview {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Featured article (base – desktop neutral) */
+.article-preview.featured {
+    grid-column: span 2;
+}
+
+.article-preview img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: contain;
+    background: white;
+}
+
+/* =========================
+   TYPOGRAPHY
+   ========================= */
+
+.article-preview h2 {
+    font-size: 1.4rem;
+    line-height: 1.35;
+    margin: 12px 0 6px;
+}
+
+.article-preview .meta {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* =========================
+   TABLET (≤ 1024px)
+   ========================= */
+
+@media (max-width: 1024px) {
+
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+        padding: 0 24px;
+    }
+
+    .article-preview.featured {
+        grid-column: span 2;
+    }
+
+    .article-preview img {
+        max-height: 220px;
+    }
+}
+
+/* =========================
+   MOBILE (≤ 768px)
+   ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 0;
+    }
+
+    /* Grid becomes single column */
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 16px;
+    }
+
+    /* Featured article becomes lead story */
+    .article-preview.featured {
+        grid-column: 1 / -1;
+    }
+
+    .article-preview.featured img {
+        max-height: 260px;
+        object-fit: cover;
+        border-width: 2px;
+    }
+
+    .article-preview.featured h2 {
+        font-size: 1.5rem;
+        line-height: 1.25;
+        margin-top: 14px;
+    }
+
+    .article-preview.featured .meta {
+        font-size: 0.95rem;
+    }
+
+    /* Regular articles */
+    .article-preview img {
+        max-height: 200px;
+        border-width: 1.5px;
+        object-fit: contain;
+    }
+
+    .article-preview h2 {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    .article-preview .meta {
+        font-size: 0.9rem;
+    }
+
+    /* Navigation bar */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    nav a {
+        font-size: 0.95rem;
+        padding: 6px 0;
+    }
+}
+
+/* =========================
+   SMALL PHONES (≤ 480px)
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .article-preview.featured img {
+        max-height: 220px;
+    }
+
+    .article-preview.featured h2 {
+        font-size: 1.35rem;
+    }
+
+    .article-preview img {
+        max-height: 180px;
+        object-fit: cover;
+    }
+
+    .article-preview h2 {
+        font-size: 1.1rem;
+    }
+}
+
 </style>
 
 </head>
 <body>
 
 <!-- HEADER (CLICKABLE) -->
-<a href="The Roadmap index.html">
+<a href="index.html">
 <div class="header">
     <img src="compass_3.png">
     <div class="header-title">THE ROADMAP</div>
@@ -169,9 +352,10 @@ a { text-decoration: none; color: inherit; }
         <a href="stem.html">STEM</a>
         <a href="humanities.html">Humanities</a>
         <a href="sports.html">Sports</a>
-        <a href="art.html">Arts</a>
+        <a href="arts.html">Arts</a>
         <a href="government.html">Government</a>
         <a href="hybrid.html">Hybrid</a>
+        <a href="about.html">About</a>
     </div>
 
     <div class="nav-right">
@@ -184,7 +368,7 @@ a { text-decoration: none; color: inherit; }
 <div class="featured-row">
 
     <div class="featured-box">
-        <img class="featured-img" src="Dec_Dr. Tsai.png">
+        <img class="featured-img" src="Dec_photos_Dr. Tsai.png">
         <h2>
             <a href="Dec_stem_Dr.Tsai.html">Radiation Oncology: Advice and A Day in the Life</a>
         </h2>
@@ -195,17 +379,19 @@ a { text-decoration: none; color: inherit; }
             </div>
             <div class="meta-right">
               <!--article publication date--> 
-              <span class="article-date">December 15th, 2025</span>
+              <span class="article-date">December 2025</span>
               <!--article category--> 
               <span class="article-category stem">STEM</span>
             </div>
         </div>            
-        <p>Dr. Henry Tsai '93 speaks about his path into radiation oncology and advice for students hoping to enter the medical field</p>
+        <p>Dr. Henry Tsai '93 speaks about his path into radiation oncology and advice for students hoping to enter the medical field.</p>
     </div>
 
     <div class="featured-box">
-        <img class="featured-img" src="Dec_Spotify+Hollywood.png">
-        <h2>Riding the Wave: Bridging the Gap Between Art and Technology</h2>
+        <img class="featured-img" src="Dec_photos_Spotify+Hollywood.png">
+        <h2>
+            <a href="Dec_arts_Sheldrick+Ilogu.html">Riding the Wave: Bridging the Gap Between Art and Technology</a>
+        </h2>
         <div class="article-meta">
             <div class="meta-left">
               <!--author name--> 
@@ -213,12 +399,12 @@ a { text-decoration: none; color: inherit; }
             </div>
             <div class="meta-right">
               <!--article publication date--> 
-              <span class="article-date">December 15th, 2025</span>
+              <span class="article-date">December 2025</span>
               <!--article category--> 
               <span class="article-category arts">Arts</span>
             </div>
         </div>            
-        <p>Alumni Jon Sheldrick ‘04 and Toby Ilogu ‘19 on re-finding their Arts Careers</p>
+        <p>Alumni Jon Sheldrick ‘04 and Toby Ilogu ‘19 on re-finding their Arts Careers.</p>
     </div>
 
 </div>
@@ -230,8 +416,9 @@ a { text-decoration: none; color: inherit; }
     <div>
 
         <div class="article-preview">
-            <img src="Dec_Airplane.png">
-            <h2>Transitioning between Piloting and diving deep into Aerospace Engineering: The Story of Grayson Steding ‘06
+            <img src="Dec_photos_Airplane.png">
+            <h2>
+                <a href="Dec_stem_Steding.html">Transitioning between Piloting and diving deep into Aerospace Engineering: The Story of Grayson Steding ‘06</a>
             </h2>
             <div class="article-meta">
                 <div class="meta-left">
@@ -240,13 +427,35 @@ a { text-decoration: none; color: inherit; }
                 </div>
                 <div class="meta-right">
                   <!--article publication date--> 
-                  <span class="article-date">December 15th, 2025</span>
+                  <span class="article-date">December 2025</span>
                   <!--article category--> 
                   <span class="article-category stem">STEM</span>
                 </div>
             </div>            
-            <p>Grayson Steding '06 speaks out his career transition and re-directing his passions.</p>
+            <p>Grayson Steding '06 on his career transition and re-directing his passions.</p>
         </div>
+
+        <div class="article-preview">
+            <img src="Dec_photos_Comics.png">
+            <h2>
+                <a href="Dec_hybrid_FinalBoss.html">Final Boss: Best Place on Main Street That You Haven't Heard Of
+                </a>
+            </h2>
+            <div class="article-meta">
+                <div class="meta-left">
+                  <!--author name--> 
+                  <span class="article-author">By Nina Morozova '27</span>
+                </div>
+                <div class="meta-right">
+                  <!--article publication date--> 
+                  <span class="article-date">December 2025</span>
+                  <!--article category--> 
+                  <span class="article-category hybrid">Hybrid</span>
+                </div>
+            </div>            
+            <p>Introducing Final Boss, the comic store on Main Street, and its past that has never been told before.</p>
+        </div>
+
 
     </div>
 
@@ -254,8 +463,10 @@ a { text-decoration: none; color: inherit; }
     <div>
 
         <div class="article-preview">
-            <img src="Dec_PianoAccompanist.png">
-            <h2>Career Spotlight: Piano Accompanist            </h2>
+            <img src="Dec_photos_PianoAccompanist.png">
+            <h2>
+                <a href="Dec_arts_Renoe.html">Career Spotlight: Piano Accompanist</a>
+            </h2>
             <div class="article-meta">
                 <div class="meta-left">
                   <!--author name--> 
@@ -263,13 +474,35 @@ a { text-decoration: none; color: inherit; }
                 </div>
                 <div class="meta-right">
                   <!--article publication date--> 
-                  <span class="article-date">December 15th, 2025</span>
+                  <span class="article-date">December 2025</span>
                   <!--article category--> 
                   <span class="article-category arts">Arts</span>
                 </div>
             </div>
-            <p>How Mr. Craig Renoe came to be the Lawrenceville School's beloved piano accompanist</p>
+            <p>How Mr. Craig Renoe came to be the Lawrenceville School's beloved piano accompanist.</p>
         </div>
+
+        <div class="article-preview">
+            <img src="Feb_photos_GlobalFoundries.jpg">
+            <h2>
+                <a href="Feb_stem_Zhang.html">From Physics to Engineering: Dr. Zhang’s Path
+                </a>
+            </h2>
+            <div class="article-meta">
+                <div class="meta-left">
+                  <!--author name--> 
+                  <span class="article-author">By Nigel Li '27 (EWS)</span>
+                </div>
+                <div class="meta-right">
+                  <!--article publication date--> 
+                  <span class="article-date">February 2025</span>
+                  <!--article category--> 
+                  <span class="article-category stem">STEM</span>
+                </div>
+            </div>            
+            <p>Dr. Xiaoxiao Zhang, a technical lead at GlobalFoundries, shares her journey from studying physics to working in semiconductor engineering</p>
+        </div>
+
 
     </div>
 
@@ -277,40 +510,24 @@ a { text-decoration: none; color: inherit; }
     <div>
 
         <div class="article-preview">
-            <img src="soccerball.png">
-            <h2>Soccer and Strategy</h2>
+            <img src="Dec_photos_Endoscopy.png">
+            <h2>
+                <a href="Dec_stem_Chowdbury.html">Gastroenterology: How Dr. Chowdbury Came to Love His Medical Career</a>
+            </h2>
             <div class="article-meta">
                 <div class="meta-left">
                   <!--author name--> 
-                  <span class="article-author">By Morticia Addams</span>
+                  <span class="article-author">By Diya Chowdbury '29</span>
                 </div>
                 <div class="meta-right">
                   <!--article publication date--> 
-                  <span class="article-date">August 6, 2025</span>
+                  <span class="article-date">December 2025</span>
                   <!--article category--> 
-                  <span class="article-category sports">Sports</span>
+                  <span class="article-category stem">STEM</span>
                 </div>
             </div>
+            <p>How Dr. Chowdbury found joy in his job and turned something forced upon him into his passion.</p>
         </div>
-
-        <div class="article-preview">
-            <img src="">
-            <h2>Spotify and Instagram: How I created it all</h2>
-            <div class="article-meta">
-                <div class="meta-left">
-                  <!--author name--> 
-                  <span class="article-author">By Ella Song</span>
-                </div>
-                <div class="meta-right">
-                  <!--article publication date--> 
-                  <span class="article-date">August 6, 2025</span>
-                  <!--article category--> 
-                  <span class="article-category arts">Arts</span>
-                </div>
-            </div>
-            <p>Stories features and reels.</p>
-        </div>
-
 
     </div>
 
