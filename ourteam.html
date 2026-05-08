@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Roadmap</title>
+<link rel="icon" type="image/x-icon" href="compass_3.png">
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-family: "Times New Roman", serif;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.header img {
+    width: 90px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== FEATURED ARTICLES ===== */
+.featured-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+.featured-box {
+    border: 2px solid black;
+    padding: 20px;
+    background: white;
+}
+
+.featured-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ===== 3-COLUMN LAYOUT ===== */
+.columns-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 0 40px 40px 40px;
+}
+
+/* ===== ARTICLE CARDS ===== */
+.article-preview {
+    border: 2px solid black;
+    padding: 15px;
+    background: #ffffff;
+    margin-bottom: 30px;
+}
+
+.article-preview img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    object-position: center center;
+    background: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.article-preview h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+/* Category label */
+.article-category {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ===== SECTION COLORS ===== */
+.stem       { background: #bcd9ff; color: #004a99; }
+.humanities { background: #ffcccc; color: #b30000; }
+.arts       { background: #ffdff1; color: #b7014a; }
+.sports     { background: #d9ffe4; color: #006600; }
+.hybrid     { background: #e0e0e0; color: #333333; }
+.government { background: #edbeff; color: #7700ae; }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        font-family: "Times New Roman", serif;
+        color: #111;
+    }
+
+    .masthead-container {
+        max-width: 600px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+
+    .section {
+        margin-bottom: 20px;
+    }
+
+    .role {
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+
+    .name {
+        line-height: 1.4;
+    }
+
+    .mission-contact {
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1.5px solid #000;
+    }
+
+    .mission-contact h2 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .mission-contact p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+
+</style>
+
+</head>
+<body>
+
+<!-- HEADER (CLICKABLE) -->
+<a href="index.html">
+<div class="header">
+    <img src="compass_3.png">
+    <div class="header-title">THE ROADMAP</div>
+</div>
+</a>
+
+<div class="subtitle">The Path of Others Becomes Your Future.</div>
+<br>
+
+<!-- NAVIGATION BAR -->
+<div class="navbar">
+
+    <div class="nav-left">
+        <a href="ourteam.html">Our Team</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="stem.html">STEM</a>
+        <a href="humanities.html">Humanities</a>
+        <a href="sports.html">Sports</a>
+        <a href="arts.html">Arts</a>
+        <a href="government.html">Government</a>
+        <a href="hybrid.html">Hybrid</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="search.html">Search</a>
+    </div>
+
+</div>
+
+<div class="masthead-container">
+    <h1>Our Team At Lawrenceville</h1>
+
+    <div class="section">
+        <div class="role">Editor-in-Chief</div>
+        <div class="name">Sunny Shang ’27</div>
+    </div>
+
+    <div class="section">
+        <div class="role">Executive Editor</div>
+        <div class="name">Ella Song ’27</div>
+    </div>
+
+    <div class="section">
+        <div class="role">Arts Editor</div>
+        <div class="name">________</div>
+    </div>
+
+    <div class="section">
+        <div class="role">Government Editor</div>
+        <div class="name">__________</div>
+    </div>
+
+    <div class="section">
+        <div class="role">Humanities Editor</div>
+        <div class="name">___________</div>
+    </div>
+
+    <div class="section">
+        <div class="role">Hybrid Editor</div>
+        <div class="name">Claire Chen '28</div>
+    </div>
+
+    <div class="section">
+        <div class="role">Sports Editor</div>
+        <div class="name">_______________</div>
+    </div>
+
+    <div class="section">
+        <div class="role">STEM Editor</div>
+        <div class="name">Afra Miao '28</div>
+    </div>
+
+
+    <div class="section">
+        <div class="role">Photos and Graphics Editor</div>
+        <div class="name">Jiayi Ye '27</div>
+    </div>
+
+    <div class="section">
+        <div class="role">Web Editor</div>
+        <div class="name">____________</div>
+    </div>
+
+    <div class="section">
+        <div class="role">Social Media and Outreach Editor</div>
+        <div class="name">__________</div>
+    </div>
+
+    <div class="section">
+        <div class="role">Faculty Advisor</div>
+        <div class="name">JvO</div>
+    </div>
+
+
+    <div class="chapters">
+        <div class="role">Chapters</div>
+        <div class="name">Emma Willard Chapter - Nigel Li '27</div>
+        
+    </div>
+
+
+</div>
+
+</body>
+
+</html>
